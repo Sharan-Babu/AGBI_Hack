@@ -158,7 +158,7 @@ if choice=="Skin Cancer Detector":
 	            models_dir = 'models'
 		    #model = load_model(os.path.join(models_dir, 'saved_model.pb'))
 		    #model = load_model(os.path.join(models_dir, 'final_weights.h5'))
-	            model = load_model('models')
+	            model = load_model('saved_model')
 	            img = Image.open(image)
 	            img = img_to_array(img)
 	            img = img.resize((128,128))	
