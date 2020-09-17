@@ -1,6 +1,6 @@
-# Apollo19 - AGBI Digital HealthTech Challenge
+# VOCAI
 <b><u>Demo Link</u></b>: https://youtu.be/E1D_kdOuTtc <br>
-A mobile and web application to help patients and doctors effectively fight against skin cancer.
+voice app
 
 # Steps to run the program:
 <ol>
