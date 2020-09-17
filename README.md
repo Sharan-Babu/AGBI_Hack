@@ -4,4 +4,4 @@ Skin app
 
 # Steps to run the program:
 
-![''](https://github.com/Sharan-Babu/agbihack/blob/master/carbon%20(1).png)
+![''](https://github.com/Sharan-Babu/agbihack/blob/master/carbon%20(2).png)
