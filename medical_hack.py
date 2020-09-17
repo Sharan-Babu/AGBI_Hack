@@ -33,12 +33,8 @@ config={
     'measurementId': "G-JHSZTKVQ42"
 }
 
-@st.cache(suppress_st_warning=True)
-def loading_model():
-	weights_dir = 'weights/article'
-	edsr_fine_tuned = edsr(scale=4, num_res_blocks=16)
-	edsr_fine_tuned.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4-fine-tuned.h5'))
-	return edsr_fine_tuned
+edsr_fine_tuned = edsr(scale=4, num_res_blocks=16)
+edsr_fine_tuned.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4-fine-tuned.h5'))
 
 access_token = "Y2GZBBI2HC5J4S3KR5LLK652L4J4CMP7"
 client=Wit(access_token)
@@ -145,7 +141,7 @@ if choice=="Skin Cancer Detector":
 				#edsr_pre_trained.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4.h5'))
 				#edsr_fine_tuned = edsr(scale=4, num_res_blocks=16)
 				#edsr_fine_tuned.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4-fine-tuned.h5'))
-				edsr_fine_tuned = loading_model()
+				
 				st.text('Uploaded Image')
 				st.image(picture,width=100)
 				resolve_and_plot(edsr_fine_tuned, picture)
