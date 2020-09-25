@@ -26,6 +26,7 @@ from wit import Wit
 def load_stuff():
 	edsr_fine_tuned = edsr(scale=4, num_res_blocks=16)
 	edsr_fine_tuned.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4-fine-tuned.h5'))
+	return edsr_fine_tuned
 	
 
 
@@ -147,7 +148,7 @@ if choice=="Skin Cancer Detector":
 				weights_dir = 'weights/article'
 				#edsr_pre_trained = edsr(scale=4, num_res_blocks=16)
 				#edsr_pre_trained.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4.h5'))
-				load_stuff()
+				edsr_fine_tuned = load_stuff()
 				#edsr_fine_tuned = edsr(scale=4, num_res_blocks=16)
 				#edsr_fine_tuned.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4-fine-tuned.h5'))
 				
