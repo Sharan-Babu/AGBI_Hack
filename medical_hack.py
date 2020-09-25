@@ -22,6 +22,14 @@ from model import resolve_single
 from utils import load_image
 from wit import Wit
 
+@st.cache
+def load_stuff():
+	edsr_fine_tuned = edsr(scale=4, num_res_blocks=16)
+	edsr_fine_tuned.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4-fine-tuned.h5'))
+	
+
+
+
 config={
 	'apiKey': "AIzaSyCIHN0D6PHpk8je3mVn5w_l4ZHo0_2quL0",
     'authDomain': "pybase-c69c6.firebaseapp.com",
@@ -139,8 +147,9 @@ if choice=="Skin Cancer Detector":
 				weights_dir = 'weights/article'
 				#edsr_pre_trained = edsr(scale=4, num_res_blocks=16)
 				#edsr_pre_trained.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4.h5'))
-				edsr_fine_tuned = edsr(scale=4, num_res_blocks=16)
-				edsr_fine_tuned.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4-fine-tuned.h5'))
+				load_stuff()
+				#edsr_fine_tuned = edsr(scale=4, num_res_blocks=16)
+				#edsr_fine_tuned.load_weights(os.path.join(weights_dir, 'weights-edsr-16-x4-fine-tuned.h5'))
 				
 				st.text('Uploaded Image')
 				st.image(picture,width=100)
