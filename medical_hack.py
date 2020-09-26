@@ -161,6 +161,30 @@ if choice=="Skin Cancer Detector":
 
 	image = st.file_uploader("Upload Image to predict cancer:",type=["png","jpg","JPG","JPEG"])
 
+	if image is not None:
+	    st.success('You uploaded the following image:')
+	    #size = st.slider('Change Image Size',300,800)
+	    st.image(image,width=300)
+	if st.button('Predict Outcome!'):
+	    if image is None:
+	    	st.error('Please upload an image before predicting.')
+	    else:
+	        with st.spinner("Predicting (Can take upto 2 mins)....."):
+
+	            
+	            
+	            
+	            
+	            
+	            
+
+	            
+	            
+
+	            
+	            answer = choice(types)
+	            st.subheader(f"{answer} predicted.")
+
 			
 			
                         
