@@ -8,7 +8,7 @@ import numpy as np
 import pyrebase
 from streamlit_drawable_canvas import st_canvas
 import pandas as pd
-import tensorflow as tf
+#import tensorflow as tf
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
 from tensorflow.keras.preprocessing.image import load_img
