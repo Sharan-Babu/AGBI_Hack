@@ -172,6 +172,8 @@ if choice=="Skin Cancer Detector":
 	        with st.spinner("Predicting (Can take upto 2 mins)....."):
 			answer = choice(types)
 			st.subheader("f{answer} predicted")
+			
+			
 	            
 		    
 		    
