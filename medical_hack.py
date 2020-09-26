@@ -1,6 +1,6 @@
 # conda activate hackathon
 import streamlit as st
-from random import choice
+import random
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
@@ -182,7 +182,7 @@ if choice=="Skin Cancer Detector":
 	            
 
 	            
-	            answer = choice(types)
+	            answer = random.choice(types)
 	            st.subheader(f"{answer} predicted.")
 
 			
