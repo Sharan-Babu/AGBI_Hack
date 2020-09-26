@@ -173,6 +173,8 @@ if choice=="Skin Cancer Detector":
 	            sleep(5)
 		    answer = choice(types)
 		    st.subheader(f"{answer} predicted.")
+		    
+		    
 
 	            
 		    
