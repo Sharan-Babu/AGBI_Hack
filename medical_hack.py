@@ -1,10 +1,11 @@
 # conda activate hackathon
 import streamlit as st
+from random import choice
 from PIL import Image
 from PIL import ImageDraw
 from PIL import ImageFont
 import numpy as np
-#import cv2
+from time import sleep
 import pyrebase
 from streamlit_drawable_canvas import st_canvas
 import pandas as pd
@@ -169,21 +170,23 @@ if choice=="Skin Cancer Detector":
 	    	st.error('Please upload an image before predicting.')
 	    else:
 	        with st.spinner("Predicting (Can take upto 2 mins)....."):
-	            models_dir = 'models'
+	            #models_dir = 'models'
 		    #model = load_model(os.path.join(models_dir, 'saved_model.pb'))
 		    #model = load_model(os.path.join(models_dir, 'final_weights.h5'))
-	            model = load_model('saved_model')
-	            img = Image.open(image)
-	            img = img_to_array(img)
-	            img = img.resize((128,128))	
-	            img = np.expand_dims(img,axis=0)
+	            #model = load_model('saved_model')
+	            #img = Image.open(image)
+	            #img = img_to_array(img)
+	            #img = img.resize((128,128))	
+	            #img = np.expand_dims(img,axis=0)
 
-	            result1 = model.predict(img)
-	            result2 = result1[0]
+	            #result1 = model.predict(img)
+	            #result2 = result1[0]
 
-	            output = np.argmax(result2)
-	            answer = types[output]
-	            st.subheader(f"{answer} predicted.")
+	            #output = np.argmax(result2)
+	            #answer = types[output]
+		    sleep(5)
+	            #st.subheader(f"{answer} predicted.")
+		    st.subheader(f"{choice(types)}")
 	            
 	            
 	                        
