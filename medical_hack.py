@@ -170,19 +170,11 @@ if choice=="Skin Cancer Detector":
 	    	st.error('Please upload an image before predicting.')
 	    else:
 	        with st.spinner("Predicting (Can take upto 2 mins)....."):
-			answer = choice(types)
-			st.subheader("f{answer} predicted")
+		    answer = choice(types)
+		    st.subheader("f{answer} predicted")
 			
 			
-	            
-		    
-		    
-
-	            
-		    
-	            
-	            
-	                        
+                        
 elif choice=="Patient Dashboard":
 	st.title('Welcome, Doctor! :ambulance:')
 	st.info("Checkout the sidebar for selecting features :point_left: :point_left: :point_left:")
