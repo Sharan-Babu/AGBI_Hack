@@ -170,7 +170,10 @@ if choice=="Skin Cancer Detector":
 	    	st.error('Please upload an image before predicting.')
 	    else:
 	        with st.spinner("Predicting (Can take upto 2 mins)....."):
-		    answer = choice(types)
+			sleep(5)
+			answer = choice(types)
+			st.subheader(f"{answer} predicted.")
+		    
 	            #models_dir = 'models'
 		    #model = load_model(os.path.join(models_dir, 'saved_model.pb'))
 		    #model = load_model(os.path.join(models_dir, 'final_weights.h5'))
@@ -186,7 +189,7 @@ if choice=="Skin Cancer Detector":
 	            #output = np.argmax(result2)
 	            #answer = types[output]
 		   
-	            st.subheader(f"{answer} predicted.")
+	            
 		    
 	            
 	            
