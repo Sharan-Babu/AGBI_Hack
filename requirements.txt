@@ -4,7 +4,7 @@ numpy
 pyrebase4
 streamlit-drawable-canvas
 pandas
-keras==1.14
+keras<1.2
 wit
 dataclasses
 matplotlib
