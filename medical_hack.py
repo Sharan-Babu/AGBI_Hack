@@ -170,9 +170,9 @@ if choice=="Skin Cancer Detector":
 	    	st.error('Please upload an image before predicting.')
 	    else:
 	        with st.spinner("Predicting (Can take upto 2 mins)....."):
-	            sleep(5)
-		    answer = choice(types)
-		    st.subheader(f"{answer} predicted.")
+			answer = choice(types)
+			st.subheader("f{answer} predicted")
+	            
 		    
 		    
 
