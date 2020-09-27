@@ -183,7 +183,7 @@ if choice=="Skin Cancer Detector":
 
 	            sleep(5)
 	            answer = random.choice(types)
-	            st.subheader("Dermatofibroma predicted.")
+	            st.subheader(f"{answer} predicted.")
 
 			
 			
