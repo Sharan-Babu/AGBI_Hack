@@ -1,4 +1,4 @@
-# Apollo19
+# Apollo19 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/sharan-babu/agbihack/master/medical_hack.py/+/)
 <b><u>Demo Link</u></b>: https://youtu.be/E1D_kdOuTtc <br>
 Skin app
 
